@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xxd \"C:/Users/user/Desktop/ToolBox/pages/chat/layout.vue\")",
+      "Bash(node *)"
+    ]
+  }
+}
