@@ -185,11 +185,76 @@ export default {
   en: 'English',
   ko: '한국어',
 
+  // Language Options
+  lang: {
+    中文: '중국어',
+    英文: '영어'
+  },
+
+  // Style Tags
+  开心: '행복',
+  悲伤: '슬픔',
+  愤怒: '분노',
+  温柔: '부드러움',
+  慵懒: '나른함',
+  磁性: '자성',
+  活泼: '활발',
+  深沉: '침착',
+  东北话: '동북 방언',
+  粤语: '광둥어',
+  唱歌: '노래',
+
   // Messages
   请输入用途: '용도 / 시나리오를 입력하세요',
   请输入主题: '제품 / 주제를 입력하세요',
   复制成功: '복사 완료',
   已退出: '로그아웃됨',
   生成失败: '생성 실패',
-  请重试: '다시 시도하세요'
+  请重试: '다시 시도하세요',
+
+  // Common
+  defaultUser: '사용자',
+  female: '여성',
+  male: '남성',
+
+  // TTS Text-to-Speech
+  ttsTitle: '음성 합성',
+  ttsModePreset: '프리셋 음성',
+  ttsModeDesign: '음성 디자인',
+  ttsModeClone: '음성 클론',
+  ttsPanelTitle: 'AI 음성 합성',
+  ttsIdleText: '매개변수 설정 후 "합성 시작"을 클릭하세요',
+  ttsSynthesizingText: '합성 중, 잠시만 기다려주세요...',
+  ttsSuccess: '합성 성공',
+  ttsSeconds: '초',
+  ttsDownload: '오디오 다운로드',
+  ttsCopyUrl: '링크 복사',
+  ttsDownloadStart: '다운로드 중...',
+  ttsDownloadSuccess: '다운로드 성공',
+  ttsCopySuccess: '복사 완료',
+
+  // TTS Form
+  ttsTextLabel: '합성 텍스트',
+  ttsTextPlaceholder: '합성할 텍스트를 입력하세요...',
+  ttsVoiceLabel: '음성 선택',
+  ttsStyleLabel: '스타일 제어',
+  ttsStylePlaceholder: '밝고向上的 톤, 약간 빠른 템포...',
+  ttsFormatLabel: '오디오 형식',
+  ttsVoiceDescLabel: '음성 설명',
+  ttsVoiceDescPlaceholder: '원하는 음성을 설명해주세요, 예: 젊은 여성, 따뜻하고 힐링되는...',
+  ttsDesignTextPlaceholder: '합성 텍스트 입력 (텍스트 최적화 활성화 시 선택)...',
+  ttsOptimizeText: '텍스트 최적화',
+  ttsAudioSampleLabel: '오디오 샘플 업로드',
+  ttsUploadHint: '클릭 또는 드래그하여 업로드 (MP3/WAV, ≤10MB)',
+  ttsStartSynthesize: '합성 시작',
+  ttsSynthesizing: '합성 중...',
+
+  // TTS Error Messages
+  ttsTextRequired: '합성 텍스트를 입력하세요',
+  ttsVoiceDescRequired: '음성 설명을 입력하세요',
+  ttsAudioSampleRequired: '오디오 샘플을 업로드하세요',
+  ttsFileSizeError: '오디오 파일은 10MB를 초과할 수 없습니다',
+  ttsChooseFileError: '파일 선택 실패',
+  ttsSynthesizeError: '합성 실패, 다시 시도하세요',
+  ttsPlayError: '재생 실패'
 }

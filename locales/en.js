@@ -185,11 +185,76 @@ export default {
   en: 'English',
   ko: '한국어',
 
+  // Language Options
+  lang: {
+    中文: 'Chinese',
+    英文: 'English'
+  },
+
+  // Style Tags
+  开心: 'Happy',
+  悲伤: 'Sad',
+  愤怒: 'Angry',
+  温柔: 'Gentle',
+  慵懒: 'Lazy',
+  磁性: 'Magnetic',
+  活泼: 'Lively',
+  深沉: 'Deep',
+  东北话: 'Northeast Dialect',
+  粤语: 'Cantonese',
+  唱歌: 'Singing',
+
   // Messages
   请输入用途: 'Please enter purpose / scenario',
   请输入主题: 'Please enter product / topic',
   复制成功: 'Copied successfully',
   已退出: 'Logged out',
   生成失败: 'Generation failed',
-  请重试: 'Please try again'
+  请重试: 'Please try again',
+
+  // Common
+  defaultUser: 'User',
+  female: 'Female',
+  male: 'Male',
+
+  // TTS Text-to-Speech
+  ttsTitle: 'Text-to-Speech',
+  ttsModePreset: 'Preset Voice',
+  ttsModeDesign: 'Voice Design',
+  ttsModeClone: 'Voice Clone',
+  ttsPanelTitle: 'AI Speech Synthesis',
+  ttsIdleText: 'Set parameters and click "Start Synthesize"',
+  ttsSynthesizingText: 'Synthesizing, please wait...',
+  ttsSuccess: 'Synthesis successful',
+  ttsSeconds: 's',
+  ttsDownload: 'Download Audio',
+  ttsCopyUrl: 'Copy Link',
+  ttsDownloadStart: 'Downloading...',
+  ttsDownloadSuccess: 'Download successful',
+  ttsCopySuccess: 'Copy successful',
+
+  // TTS Form
+  ttsTextLabel: 'Synthesis Text',
+  ttsTextPlaceholder: 'Enter text to synthesize...',
+  ttsVoiceLabel: 'Select Voice',
+  ttsStyleLabel: 'Style Control',
+  ttsStylePlaceholder: 'Bright, upbeat tone, slightly fast pace...',
+  ttsFormatLabel: 'Audio Format',
+  ttsVoiceDescLabel: 'Voice Description',
+  ttsVoiceDescPlaceholder: 'Describe the voice you want, e.g., Young female, warm and healing...',
+  ttsDesignTextPlaceholder: 'Enter synthesis text (optional if optimize text is enabled)...',
+  ttsOptimizeText: 'Optimize Text',
+  ttsAudioSampleLabel: 'Upload Audio Sample',
+  ttsUploadHint: 'Click or drag to upload (MP3/WAV, ≤10MB)',
+  ttsStartSynthesize: 'Start Synthesis',
+  ttsSynthesizing: 'Synthesizing...',
+
+  // TTS Error Messages
+  ttsTextRequired: 'Please enter synthesis text',
+  ttsVoiceDescRequired: 'Please enter voice description',
+  ttsAudioSampleRequired: 'Please upload audio sample',
+  ttsFileSizeError: 'Audio file must be within 10MB',
+  ttsChooseFileError: 'Failed to select file',
+  ttsSynthesizeError: 'Synthesis failed, please try again',
+  ttsPlayError: 'Playback failed'
 }

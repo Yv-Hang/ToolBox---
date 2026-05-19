@@ -1,13 +1,13 @@
 {
 	"pages": [
 		{
-			"path": "pages/index/index",
+			"path": "pages/chat/layout",
 			"style": {
 				"navigationBarTitleText": ""
 			}
 		},
 		{
-			"path": "pages/chat/layout",
+			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": ""
 			}
@@ -47,7 +47,8 @@
 	"easycom": {
 		"autoscan": true,
 		"custom": {
-			"AppFooter": "@/components/AppFooter.vue"
+			"AppFooter": "@/components/AppFooter.vue",
+			"TopHeader": "@/components/TopHeader.vue"
 		}
 	}
 }

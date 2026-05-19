@@ -1,24 +1,7 @@
 <template>
 	<view class="app-container">
 		<!-- 顶部菜单栏 -->
-		<view class="top-header">
-			<view class="menu-bar">
-				<text class="logo">{{ t('appName') }}</text>
-				<view class="nav-links">
-					<view class="nav-item" @click="navigateTo('/pages/chat/layout')">{{ t('copywriting') }}</view>
-					<view class="nav-item" @click="navigateTo('/pages/user/center')">{{ t('userCenter') }}</view>
-					<view class="nav-item active">{{ t('membership') }}</view>
-				</view>
-			</view>
-			<view class="user-section" @click="showUserMenu = !showUserMenu">
-				<view class="avatar">{{ currentUser.username ? currentUser.username.charAt(0).toUpperCase() : 'U' }}</view>
-				<text class="username">{{ currentUser.username || '用户' }}</text>
-				<view class="user-popover" v-if="showUserMenu">
-					<view class="popover-item" @click="navigateTo('/pages/chat/layout')">{{ t('backToHome') }}</view>
-					<view class="popover-item logout" @click="handleLogout">{{ t('logout') }}</view>
-				</view>
-			</view>
-		</view>
+		<TopHeader currentPage="membership" />
 
 		<!-- 主内容区 -->
 		<view class="main-content">
@@ -134,7 +117,6 @@ import { computed, onMounted, ref } from 'vue';
 import { getUserInfo, getBalance, buyMembership, redeemCardKey } from '@/api/user.js';
 import { t } from '@/locales/index.js';
 
-const showUserMenu = ref(false);
 const currentUser = ref(uni.getStorageSync('current_user') || {});
 const userId = computed(() => currentUser.value?.id);
 
@@ -258,11 +240,6 @@ const handleRedeem = async () => {
 };
 
 const navigateTo = (url) => uni.navigateTo({ url });
-const handleLogout = () => {
-	uni.removeStorageSync('current_user');
-	currentUser.value = { username: '用户', email: '' };
-	uni.showToast({ title: t('已退出'), icon: 'success' });
-};
 
 onMounted(async () => {
 	const user = uni.getStorageSync('current_user');
@@ -280,59 +257,6 @@ onMounted(async () => {
 	flex-direction: column;
 	height: 100vh;
 	background-color: #f5f7fa;
-}
-
-.top-header {
-	height: 120rpx;
-	background-color: #1a1a2e;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 60rpx;
-	box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
-
-	.menu-bar {
-		display: flex;
-		align-items: center;
-		gap: 60rpx;
-		.logo { font-size: 36rpx; font-weight: 700; color: #ffffff; }
-		.nav-links {
-			display: flex;
-			gap: 40rpx;
-			.nav-item {
-				font-size: 28rpx;
-				color: rgba(255, 255, 255, 0.7);
-				padding: 16rpx 24rpx;
-				border-radius: 8rpx;
-				transition: all 0.3s;
-				&:hover, &.active { color: #ffffff; background-color: rgba(255, 255, 255, 0.1); }
-			}
-		}
-	}
-	.user-section {
-		position: relative;
-		display: flex;
-		align-items: center;
-		gap: 16rpx;
-		cursor: pointer;
-		.avatar {
-			width: 72rpx; height: 72rpx; border-radius: 36rpx;
-			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-			color: #fff; display: flex; align-items: center; justify-content: center;
-			font-size: 32rpx; font-weight: 600;
-		}
-		.username { font-size: 28rpx; color: #ffffff; }
-		.user-popover {
-			position: absolute; top: 90rpx; right: 0; width: 240rpx;
-			background: #ffffff; box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.15);
-			border-radius: 12rpx; padding: 16rpx 0; z-index: 1000;
-			.popover-item {
-				padding: 24rpx 32rpx; font-size: 28rpx; color: #333; text-align: center;
-				&:hover { background-color: #f5f7fa; }
-				&.logout { color: #ff4d4f; border-top: 1px solid #f0f0f0; margin-top: 8rpx; }
-			}
-		}
-	}
 }
 
 .main-content {

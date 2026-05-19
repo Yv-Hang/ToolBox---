@@ -185,11 +185,76 @@ export default {
   en: 'English',
   ko: '한국어',
 
+  // 语言选项
+  lang: {
+    中文: '中文',
+    英文: '英文'
+  },
+
+  // 风格标签
+  开心: '开心',
+  悲伤: '悲伤',
+  愤怒: '愤怒',
+  温柔: '温柔',
+  慵懒: '慵懒',
+  磁性: '磁性',
+  活泼: '活泼',
+  深沉: '深沉',
+  东北话: '东北话',
+  粤语: '粤语',
+  唱歌: '唱歌',
+
   // 提示信息
   请输入用途: '请输入文案用途/场景',
   请输入主题: '请输入产品/主题',
   复制成功: '复制成功',
   已退出: '已退出',
   生成失败: '生成失败',
-  请重试: '请重试'
+  请重试: '请重试',
+
+  // 通用
+  defaultUser: '用户',
+  female: '女',
+  male: '男',
+
+  // TTS 语音合成
+  ttsTitle: '语音合成',
+  ttsModePreset: '预置音色',
+  ttsModeDesign: '音色设计',
+  ttsModeClone: '音色复刻',
+  ttsPanelTitle: 'AI语音合成',
+  ttsIdleText: '设置参数后点击"开始合成"',
+  ttsSynthesizingText: '正在合成，请稍候...',
+  ttsSuccess: '合成成功',
+  ttsSeconds: '秒',
+  ttsDownload: '下载音频',
+  ttsCopyUrl: '复制链接',
+  ttsDownloadStart: '开始下载',
+  ttsDownloadSuccess: '下载成功',
+  ttsCopySuccess: '复制成功',
+
+  // TTS 表单
+  ttsTextLabel: '合成文本',
+  ttsTextPlaceholder: '请输入需要合成语音的文本...',
+  ttsVoiceLabel: '选择音色',
+  ttsStyleLabel: '风格控制',
+  ttsStylePlaceholder: '用轻快上扬的语调，语速稍快...',
+  ttsFormatLabel: '音频格式',
+  ttsVoiceDescLabel: '音色描述',
+  ttsVoiceDescPlaceholder: '请描述您想要的声音，如：年轻女声，温柔治愈...',
+  ttsDesignTextPlaceholder: '请输入合成文本（如启用智能润色可留空）...',
+  ttsOptimizeText: '智能润色文本',
+  ttsAudioSampleLabel: '上传音频样本',
+  ttsUploadHint: '点击或拖拽上传 (MP3/WAV, ≤10MB)',
+  ttsStartSynthesize: '开始合成',
+  ttsSynthesizing: '合成中...',
+
+  // TTS 错误提示
+  ttsTextRequired: '请输入合成文本',
+  ttsVoiceDescRequired: '请输入音色描述',
+  ttsAudioSampleRequired: '请上传音频样本',
+  ttsFileSizeError: '音频文件不能超过10MB',
+  ttsChooseFileError: '选择文件失败',
+  ttsSynthesizeError: '合成失败，请重试',
+  ttsPlayError: '播放失败'
 }
